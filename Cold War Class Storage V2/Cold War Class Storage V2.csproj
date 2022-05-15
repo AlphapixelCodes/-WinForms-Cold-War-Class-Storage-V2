@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60BF113C-83C4-4C03-9783-088A5009FFC4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cold_War_Class_Storage_V2</RootNamespace>
+    <AssemblyName>Cold War Class Storage V2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cold war%281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassTitleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassTitleControl.Designer.cs">
+      <DependentUpon>ClassTitleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\AddAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\AddAttachment.Designer.cs">
+      <DependentUpon>AddAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentClass.cs" />
+    <Compile Include="BuildManager.cs" />
+    <Compile Include="ClassBuild.cs" />
+    <Compile Include="GUIs\AddBlueprint_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\AddBlueprint_GUI.Designer.cs">
+      <DependentUpon>AddBlueprint_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\AddGunHelp_Gui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\AddGunHelp_Gui.Designer.cs">
+      <DependentUpon>AddGunHelp_Gui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\Attachment_GUI2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Attachment_GUI2.Designer.cs">
+      <DependentUpon>Attachment_GUI2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassUIControl.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\AddGun_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\AddGun_GUI.Designer.cs">
+      <DependentUpon>AddGun_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\NameSavedBuild_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\NameSavedBuild_GUI.Designer.cs">
+      <DependentUpon>NameSavedBuild_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\Rename_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Rename_GUI.Designer.cs">
+      <DependentUpon>Rename_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\SavedGunBuilds_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\SavedGunBuilds_GUI.Designer.cs">
+      <DependentUpon>SavedGunBuilds_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\ViewGun_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\ViewGun_GUI.Designer.cs">
+      <DependentUpon>ViewGun_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GunControl.Designer.cs">
+      <DependentUpon>GunControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\GunSelect_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\GunSelect_GUI.Designer.cs">
+      <DependentUpon>GunSelect_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconClass.cs" />
+    <Compile Include="GUIs\ItemPick GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\ItemPick GUI.Designer.cs">
+      <DependentUpon>ItemPick GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\Perk GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Perk GUI.Designer.cs">
+      <DependentUpon>Perk GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectControl.Designer.cs">
+      <DependentUpon>SelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialLinks.cs" />
+    <Compile Include="StaticItemData.cs" />
+    <Compile Include="TextImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextImageControl.Designer.cs">
+      <DependentUpon>TextImageControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUIs\AddAttachment.resx">
+      <DependentUpon>AddAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\AddBlueprint_GUI.resx">
+      <DependentUpon>AddBlueprint_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\AddGunHelp_Gui.resx">
+      <DependentUpon>AddGunHelp_Gui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Attachment_GUI2.resx">
+      <DependentUpon>Attachment_GUI2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\AddGun_GUI.resx">
+      <DependentUpon>AddGun_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTitleControl.resx">
+      <DependentUpon>ClassTitleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\NameSavedBuild_GUI.resx">
+      <DependentUpon>NameSavedBuild_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Rename_GUI.resx">
+      <DependentUpon>Rename_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\SavedGunBuilds_GUI.resx">
+      <DependentUpon>SavedGunBuilds_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\ViewGun_GUI.resx">
+      <DependentUpon>ViewGun_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunControl.resx">
+      <DependentUpon>GunControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\GunSelect_GUI.resx">
+      <DependentUpon>GunSelect_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\ItemPick GUI.resx">
+      <DependentUpon>ItemPick GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Perk GUI.resx">
+      <DependentUpon>Perk GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectControl.resx">
+      <DependentUpon>SelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TextImageControl.resx">
+      <DependentUpon>TextImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flack Jacket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Selected dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quartermaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assassin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gearhead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scavenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tracker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward Intel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paranoia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tactical Mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cold Blooded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gung ho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ninja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spycraft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Molotov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Semtex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tomahawk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Decoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flashbang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smoke Grenade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stimshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stun Grenade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assault Pack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field Mic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gas Mine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proximity Mine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sam Turret.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trophy System.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DangerClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gunfighter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Law Breaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perk Greed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank Perk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pelington 703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selected attachment icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unselected attachment icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AK-74u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullfrog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KSP 45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LC10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAC-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Milano 821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MP5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMR 14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Type 63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stoner 63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LW3-Tundra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cigma 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamatti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E-Tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gallo SA12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hauer 77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M79.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Machete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1 Shadowhunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPG-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sledgehammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Streetsweeper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wakizashi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gunsmith.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gunsmith hovered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view hovered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hover view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cold war%281%29.ico" />
+    <None Include="Resources\ZRG 20mm.png" />
+    <None Include="Resources\Github-icon.png" />
+    <None Include="Resources\YouTube-icon small.png" />
+    <None Include="Resources\purple circle.png" />
+    <None Include="Resources\pink circle.png" />
+    <None Include="Resources\orange circle.png" />
+    <None Include="Resources\lime circle.png" />
+    <None Include="Resources\green circle.png" />
+    <None Include="Resources\cyan circle.png" />
+    <None Include="Resources\blue circle.png" />
+    <None Include="Resources\yellow circle.png" />
+    <None Include="Resources\red circle.png" />
+    <None Include="Resources\selected attachment icon1.png" />
+    <None Include="Resources\red circle1.png" />
+    <None Include="Resources\purple circle1.png" />
+    <None Include="Resources\pink circle1.png" />
+    <None Include="Resources\orange circle1.png" />
+    <None Include="Resources\lime circle1.png" />
+    <None Include="Resources\green circle1.png" />
+    <None Include="Resources\cyan circle1.png" />
+    <None Include="Resources\blue circle1.png" />
+    <None Include="Resources\green star.png" />
+    <None Include="Resources\yellow star.png" />
+    <None Include="Resources\red star.png" />
+    <None Include="Resources\purple star.png" />
+    <None Include="Resources\pink star.png" />
+    <None Include="Resources\orange star.png" />
+    <None Include="Resources\lime star.png" />
+    <None Include="Resources\cyan star.png" />
+    <None Include="Resources\blue star.png" />
+    <None Include="Resources\XM4.png" />
+    <None Include="Resources\QBZ-83.png" />
+    <None Include="Resources\Krig 6.png" />
+    <None Include="Resources\Groza.png" />
+    <None Include="Resources\FFAR 1.png" />
+    <None Include="Resources\Fara 83.png" />
+    <None Include="Resources\AK-47.png" />
+    <None Include="Resources\youtube.png" />
+    <None Include="Resources\youtube %282%29.png" />
+    <None Include="Resources\video-youtube-icon-png-images-21.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
